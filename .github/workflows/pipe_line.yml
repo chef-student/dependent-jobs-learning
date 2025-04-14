@@ -10,18 +10,17 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      VARIABLE_ONE: value_one
 
     steps:
     - uses: actions/checkout@v4
     - name: Step 1
       run: |
         echo 'Step 1 Executed'
-        cp intended_command_fail
-    - name: Step 2
-      run: |
-        echo 'Step 2 Executed'
-    - name: Step 3
-      run: |
-        echo 'Step 3 Executed'
+        exit 1
+  job_two:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v4
+     - name: Step 2
+       run: |
+         echo 'Step 2 Executed'
