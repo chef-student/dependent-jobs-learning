@@ -18,7 +18,7 @@ jobs:
     - name: Step 1
       run: |
         echo 'Step 1 Executed'
-        exit 1
+        cp intended_command_fail
     - name: Step 2
       run: |
         echo 'Step 2 Executed'
